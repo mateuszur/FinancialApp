@@ -12,10 +12,17 @@ builder.Services.AddInfrastructure(builder.Configuration);
 var app = builder.Build();
 
 //Data seeders section
+//Defoult Roles Seeder
 var scope = app.Services.CreateScope();
 var seeder = scope.ServiceProvider.GetRequiredService<FinancialAppUserRolseSeeder>();
 
 await seeder.SeedUserRoles();
+
+//assign super admin role to first user
+var scopeDefaultUser = app.Services.CreateScope();
+var seederDefaultUSer = scopeDefaultUser.ServiceProvider.GetRequiredService<FinancialAppDefaultUserSeeder>();
+
+await seederDefaultUSer.SeedUserRoles();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

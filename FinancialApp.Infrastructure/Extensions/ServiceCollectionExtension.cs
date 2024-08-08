@@ -24,6 +24,9 @@ namespace FinancialApp.Infrastructure.Extensions
             //Seeders section:
 
             services.AddScoped<FinancialAppUserRolseSeeder>();
+            services.AddScoped<FinancialAppDefaultUserSeeder>();
+
+
         }
       
 
