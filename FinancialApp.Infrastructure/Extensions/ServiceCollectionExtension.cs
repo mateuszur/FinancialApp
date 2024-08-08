@@ -1,4 +1,5 @@
 ﻿using FinancialApp.Infrastructure.Persistence;
+using FinancialApp.Infrastructure.Seeders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +24,11 @@ namespace FinancialApp.Infrastructure.Extensions
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<FinancialAppDbContext>();
 
+
+
+            //Seeders section:
+
+            services.AddScoped<FinancialAppUserRolseSeeder>();
         }
       
 

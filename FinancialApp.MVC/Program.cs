@@ -1,4 +1,5 @@
 using FinancialApp.Infrastructure.Extensions;
+using FinancialApp.Infrastructure.Seeders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,12 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
+
+//Data seeders section
+var scope = app.Services.CreateScope();
+var seeder = scope.ServiceProvider.GetRequiredService<FinancialAppUserRolseSeeder>();
+
+await seeder.SeedUserRoles();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
