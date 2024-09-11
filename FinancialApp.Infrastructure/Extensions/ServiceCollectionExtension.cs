@@ -15,7 +15,7 @@ namespace FinancialApp.Infrastructure.Extensions
                  options.UseMySql(configuration.GetConnectionString("FinancialApp"), new MySqlServerVersion(new Version(10,6,18))));
 
 
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<FinancialAppDbContext>();
 
