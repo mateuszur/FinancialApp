@@ -7,6 +7,7 @@ namespace FinancialApp.Infrastructure.Persistence
     {
         public FinancialAppDbContext(DbContextOptions<FinancialAppDbContext> options) : base(options) { }
 
+        public DbSet<Domain.Entities.FinancialAppExpenseCategories> FinancialAppExpenseCategories {get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
