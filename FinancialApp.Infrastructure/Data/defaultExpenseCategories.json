@@ -1,0 +1,162 @@
+[
+  {
+    "Name": "rent",
+    "IsDefault": true,
+    "NamePL": "czynsz"
+  },
+  {
+    "Name": "mortgage",
+    "IsDefault": true,
+    "NamePL": "kredyt hipoteczny"
+  },
+  {
+    "Name": "utilities expense (water)",
+    "IsDefault": true,
+    "NamePL": " opłaty za media (woda)"
+  },
+  {
+    "Name": "utilities expense (electricity)",
+    "IsDefault": true,
+    "NamePL": "opłaty za media (prąd)"
+  },
+  {
+    "Name": "utilities expense (gas)",
+    "IsDefault": true,
+    "NamePL": "opłaty za media (gaz)"
+  },
+  {
+    "Name": "internet",
+    "IsDefault": true,
+    "NamePL": "internet"
+  },
+  {
+    "Name": "phone",
+    "IsDefault": true,
+    "NamePL": "telefon"
+  },
+  {
+    "Name": "groceries",
+    "IsDefault": true,
+    "NamePL": "zakupy spożywcze"
+  },
+  {
+    "Name": "takeouts",
+    "IsDefault": true,
+    "NamePL": "jedzenie na wynos"
+  },
+  {
+    "Name": "restaurants",
+    "IsDefault": true,
+    "NamePL": "restauracje"
+  },
+  {
+    "Name": "fuel",
+    "IsDefault": true,
+    "NamePL": "paliwo"
+  },
+  {
+    "Name": "public transportation tickets",
+    "IsDefault": true,
+    "NamePL": "bilety komunikacji miejskiej"
+  },
+  {
+    "Name": "car insurance",
+    "IsDefault": true,
+    "NamePL": "ubezpieczenie samochodu"
+  },
+  {
+    "Name": "maintenance and repairs",
+    "IsDefault": true,
+    "NamePL": "serwis i naprawy"
+  },
+  {
+    "Name": "health insurance",
+    "IsDefault": true,
+    "NamePL": "ubezpieczenie zdrowotne"
+  },
+  {
+    "Name": "medications",
+    "IsDefault": true,
+    "NamePL": "leki"
+  },
+  {
+    "Name": "doctor visits",
+    "IsDefault": true,
+    "NamePL": "wizyty lekarskie"
+  },
+  {
+    "Name": "school fees",
+    "IsDefault": true,
+    "NamePL": "opłaty za szkołę"
+  },
+  {
+    "Name": "books",
+    "IsDefault": true,
+    "NamePL": "książki"
+  },
+  {
+    "Name": "courses",
+    "IsDefault": true,
+    "NamePL": "kursy"
+  },
+  {
+    "Name": "movies",
+    "IsDefault": true,
+    "NamePL": "kino"
+  },
+  {
+    "Name": "theater",
+    "IsDefault": true,
+    "NamePL": "teatr"
+  },
+  {
+    "Name": "subscriptions",
+    "IsDefault": true,
+    "NamePL": "subskrypcje"
+  },
+  {
+    "Name": "hobbies",
+    "IsDefault": true,
+    "NamePL": "hobby"
+  },
+  {
+    "Name": "clothes",
+    "IsDefault": true,
+    "NamePL": "odzież"
+  },
+  {
+    "Name": "shoes",
+    "IsDefault": true,
+    "NamePL": "obuwie"
+  },
+  {
+    "Name": "accessories",
+    "IsDefault": true,
+    "NamePL": "akcesoria"
+  },
+  {
+    "Name": "savings accounts",
+    "IsDefault": true,
+    "NamePL": "konta oszczędnościowe"
+  },
+  {
+    "Name": "retirement",
+    "IsDefault": true,
+    "NamePL": "emerytura"
+  },
+  {
+    "Name": "gifts",
+    "IsDefault": true,
+    "NamePL": "prezenty"
+  },
+  {
+    "Name": "donations",
+    "IsDefault": true,
+    "NamePL": "darowizny"
+  },
+  {
+    "Name": "non-health insurance",
+    "IsDefault": true,
+    "NamePL": "ubezpieczenia inne niż zdrowotne"
+  }
+]

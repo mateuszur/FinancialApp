@@ -17,8 +17,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Seeders\" />
     <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialApp.Application\FinancialApp.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\defaultExpenseCategories.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
