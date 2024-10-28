@@ -19,18 +19,11 @@ namespace FinancialApp.Infrastructure.Extensions
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<FinancialAppDbContext>();
 
-
-
             //Seeders section:
 
             services.AddScoped<FinancialAppUserRolseSeeder>();
             services.AddScoped<FinancialAppDefaultUserSeeder>();
-
-
-        }
-      
-
-
-        
+            services.AddScoped<FinancialAppDefaultExpenseCategoriesSeeder>();
+        } 
     }
 }

@@ -16,17 +16,25 @@ builder.Services.AddInfrastructure(builder.Configuration);
 var app = builder.Build();
 
 //Data seeders section
+
 //Defoult Roles Seeder
 var scope = app.Services.CreateScope();
 var seeder = scope.ServiceProvider.GetRequiredService<FinancialAppUserRolseSeeder>();
 
 await seeder.SeedUserRoles();
 
-//assign super admin role to first user
+//Assign super admin role to first user
 var scopeDefaultUser = app.Services.CreateScope();
 var seederDefaultUSer = scopeDefaultUser.ServiceProvider.GetRequiredService<FinancialAppDefaultUserSeeder>();
 
 await seederDefaultUSer.SeedUserRoles();
+
+//Default  Expense Categories seeder
+var scopeDefaultExpenseCategories = app.Services.CreateScope();
+var seederDefaultExpenseCategories = scopeDefaultExpenseCategories.ServiceProvider.GetRequiredService<FinancialAppDefaultExpenseCategoriesSeeder>();
+
+await seederDefaultExpenseCategories.SeedDefaultExpenseCategories();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -4,6 +4,7 @@ using FinancialApp.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinancialApp.Infrastructure.Migrations
 {
     [DbContext(typeof(FinancialAppDbContext))]
-    partial class FinancialAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241028083901_FinancialAppExpenseCategoriesTableModification")]
+    partial class FinancialAppExpenseCategoriesTableModification
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,9 +38,10 @@ namespace FinancialApp.Infrastructure.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("EncodedNamePL")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<bool?>("IsDefault")
+                    b.Property<bool>("IsDefault")
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Name")
@@ -45,6 +49,7 @@ namespace FinancialApp.Infrastructure.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("NamePL")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
