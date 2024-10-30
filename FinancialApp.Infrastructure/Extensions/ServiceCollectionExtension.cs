@@ -23,7 +23,7 @@ namespace FinancialApp.Infrastructure.Extensions
 
             services.AddScoped<FinancialAppUserRolseSeeder>();
             services.AddScoped<FinancialAppDefaultUserSeeder>();
-            services.AddScoped<FinancialAppDefaultExpenseCategoriesSeeder>();
+            services.AddScoped<FinancialAppDefaultExpenseAndRevenueCategoriesSeeder>();
         } 
     }
 }

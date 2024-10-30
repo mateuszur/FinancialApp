@@ -1,0 +1,104 @@
+[
+  {
+    "Name": "salary",
+    "IsDefault": true,
+    "NamePL": "wynagrodzenie z pracy",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "bonuses",
+    "IsDefault": true,
+    "NamePL": "premie",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "overtime",
+    "IsDefault": true,
+    "NamePL": "nadgodziny",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "commissions",
+    "IsDefault": true,
+    "NamePL": "prowizje",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "dividends",
+    "IsDefault": true,
+    "NamePL": "dywidendy",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "interest",
+    "IsDefault": true,
+    "NamePL": "odsetki",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "capital gains",
+    "IsDefault": true,
+    "NamePL": "zyski z kapitału",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "income from renting out property",
+    "IsDefault": true,
+    "NamePL": "dochody z wynajmu nieruchomości",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "pensions",
+    "IsDefault": true,
+    "NamePL": "emerytura/renta",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "allowances",
+    "IsDefault": true,
+    "NamePL": "zasiłki",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "gifts ",
+    "IsDefault": true,
+    "NamePL": "prezenty",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "donations",
+    "IsDefault": true,
+    "NamePL": "darowizny",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "alimony ",
+    "IsDefault": true,
+    "NamePL": "alimenty",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "financial support",
+    "IsDefault": true,
+    "NamePL": "wsparcie finansowe",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "asset sales:",
+    "IsDefault": true,
+    "NamePL": "sprzedaż majątku",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "Sprzedaż majątku:",
+    "IsDefault": true,
+    "NamePL": "Wynagrodzenie z pracy",
+    "Type": "Revenue"
+  },
+  {
+    "Name": "other",
+    "IsDefault": true,
+    "NamePL": "inne",
+    "Type": "Revenue"
+  }
+]

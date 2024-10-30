@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/FinancialApp.MVC.styles.css" asp-append-version="true" />
 </head>
 <body>
-        @if (ViewData["Title"]?.ToString() != "Logowanie" )
+    @if (ViewData["Title"]?.ToString() != "Logowanie" && ViewData["Title"]?.ToString() != "Rejestracja" && ViewData["Title"]?.ToString() != "Resend email confirmation")
         {
         <header>
             <nav class="navbar navbar-expand bg-primary" data-bs-theme="dark">

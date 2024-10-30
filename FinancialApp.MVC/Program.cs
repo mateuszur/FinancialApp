@@ -29,9 +29,9 @@ var seederDefaultUSer = scopeDefaultUser.ServiceProvider.GetRequiredService<Fina
 
 await seederDefaultUSer.SeedUserRoles();
 
-//Default  Expense Categories seeder
+//Default  Expense and Revenue Categories seeder
 var scopeDefaultExpenseCategories = app.Services.CreateScope();
-var seederDefaultExpenseCategories = scopeDefaultExpenseCategories.ServiceProvider.GetRequiredService<FinancialAppDefaultExpenseCategoriesSeeder>();
+var seederDefaultExpenseCategories = scopeDefaultExpenseCategories.ServiceProvider.GetRequiredService<FinancialAppDefaultExpenseAndRevenueCategoriesSeeder>();
 
 await seederDefaultExpenseCategories.SeedDefaultExpenseCategories();
 

@@ -4,6 +4,7 @@ using FinancialApp.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinancialApp.Infrastructure.Migrations
 {
     [DbContext(typeof(FinancialAppDbContext))]
-    partial class FinancialAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241028175848_AddTypeToCategoriesTable")]
+    partial class AddTypeToCategoriesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,47 +24,6 @@ namespace FinancialApp.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
-
-            modelBuilder.Entity("FinancialApp.Domain.Entities.FinancialAppExpenseAndRevenue", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Amount")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("CategoriesIdId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAd")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("CreatedByIdId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("EncodedTitle")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoriesIdId");
-
-                    b.HasIndex("CreatedByIdId");
-
-                    b.ToTable("FinancialAppExpenseAndRevenue");
-                });
 
             modelBuilder.Entity("FinancialApp.Domain.Entities.FinancialAppExpenseAndRevenueCategories", b =>
                 {
@@ -94,7 +56,7 @@ namespace FinancialApp.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FinancialAppExpenseAndRevenueCategories");
+                    b.ToTable("FinancialAppExpenseCategories");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -295,25 +257,6 @@ namespace FinancialApp.Infrastructure.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("FinancialApp.Domain.Entities.FinancialAppExpenseAndRevenue", b =>
-                {
-                    b.HasOne("FinancialApp.Domain.Entities.FinancialAppExpenseAndRevenueCategories", "CategoriesId")
-                        .WithMany()
-                        .HasForeignKey("CategoriesIdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedById")
-                        .WithMany()
-                        .HasForeignKey("CreatedByIdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("CategoriesId");
-
-                    b.Navigation("CreatedById");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
